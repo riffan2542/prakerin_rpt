@@ -3,16 +3,15 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Session;
 
 class Tag extends Model
 {
-    protected $fillable = ['nama_tag', 'slug', 'artikel_id', 'tag_id'];
+    protected $fillable = ['nama_tag', 'slug'];
     public $timestamps = true;
 
     public function artikel()
     {
-        return $this->belongstoMany('App\Kategori', 'artikel_tag', 'tag_id', 'artikel_id');
+        return $this->hasMany('App\Artikel', 'tag_id');
     }
 
     public function getRouteKeyName()
@@ -24,10 +23,10 @@ class Tag extends Model
     {
         parent::boot();
         self::deleting(function ($tag) {
-            // mengecek apakah artikel masih terhubung
+            // mengecek apakah artikel tercantum dengan tag tersebut
             if ($tag->artikel->count() > 0) {
                 // menyiapkan pesan error
-                $html = 'Tag tidak bisa dihapus karena masih memiliki artikel ';
+                $html = 'tag tidak bisa dihapus karena masih memiliki artikel ';
                 $html .= '<ul>';
                 foreach ($tag->artikel as $data) {
                     $html .= "$data->judul";

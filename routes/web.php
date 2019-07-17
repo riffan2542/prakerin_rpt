@@ -56,3 +56,7 @@ Route::group(['prefix' => '/'], function () {
     Route::get('/index/kategori/{cat}', 'Frontend_Controller@blogcat')->name('cat.blog');
     Route::get('/index/tag/{tag}', 'Frontend_Controller@blogtag')->name('tag.blog');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

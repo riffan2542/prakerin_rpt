@@ -28,6 +28,7 @@ class CreateTagsTable extends Migration
             $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
             $table->timestamps();
         });
+
     }
 
     /**
@@ -38,6 +39,5 @@ class CreateTagsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('tags');
-        Schema::dropIfExists('artikel_tag');
     }
 }
