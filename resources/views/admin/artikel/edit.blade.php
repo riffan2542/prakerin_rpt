@@ -35,19 +35,25 @@
         <textarea id="editorl" rows="8" cols="30" type="text" name="konten">{{ $artikel->konten }}</textarea>
     </div>
     <div class="form-group">
-        <label for="">Foto</label><br>
-        <img src="{{ asset('assets/img/artikel/'.$artikel->foto) }}" alt="" height="250px" width="250px">
-        <input type="file" class="form-control" name="foto">
+        <label for="">Foto</label>
+        @if (isset($artikel) && $artikel->foto)
+        <p>
+            <img src="{{ asset('/assets/img/artikel/'. $artikel->foto.'') }}" alt="Foto" width="100px" height="100px" style="border-radius: 6%">
+        </p>
+        @endif
+        <input class="form-control" type="file" name="foto" value="{{ $artikel->foto }}" required>
     </div>
     <div class="form-group">
-        <label for="">Tags</label>
-            <select class="form-control" name="tag[]" id="select2" multiple>
-                @foreach ($tag as $data)
-                    <option value="{{ $data->id }}" {{ (in_array($data->id, $selected)) ? 'selected="selected"' : '' }}>
-                        {{ $data->nama_tag }}</option>
-                @endforeach
-            </select>
-        </div>
+        <label for="">Tag</label>
+        <select name="tag_id[]" id="s2_demo3" class="form-control multiple" multiple>
+            @foreach($tag as $data)
+                <option value="{{ $data->id }}"
+                {{ (in_array($data->id, $selected)) ?
+                    'selected="selected"' : '' }}>
+                    {{ $data->nama_tag }}
+                </option>
+            @endforeach
+        </select>
     </div>
     <div class="form-group">
         <label for="">Kategori</label>

@@ -135,7 +135,7 @@
 
     <!-- ##### Post Details Area Start ##### -->
     <section class="post-news-area section-padding-0-100">
-        <div class="container">
+        <div class="container"> 
             <div class="row justify-content-center">
                 <!-- Post Details Content Area -->
                 <div class="col-12 col-lg-8">
@@ -145,6 +145,7 @@
 <!-- Start blog-posts Area -->
 			<section class="blog-posts-area section-gap">
 				<div class="container">
+                <h3>{{ $artikel->judul }}</h3>
 					<div class="row">
 						<div class="col-lg-8 post-list blog-post-list">
                                 <div class="single-post">
@@ -155,9 +156,6 @@
                                             @endforeach
                                         </ul>
                                         {{--  <a href="{{ route('detail.blog', $artikel->slug) }}">
-                                            <h1>
-                                                {{ $artikel->judul }}
-                                            </h1>
                                         </a><br>  --}}
                                             <p>
                                                 {!! $artikel->konten !!}

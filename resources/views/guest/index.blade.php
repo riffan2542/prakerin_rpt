@@ -746,7 +746,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="main_title">
-                        <center><h1>Artikel</h1></center>
+                        <center><h1 style="color:yellow;">Artikel</h1></center>
                         <br>
 					</div>
 				</div>
@@ -758,23 +758,23 @@
 						<div class="blog_img_box">
                             <img class="img-fluid" src="{{ asset('assets/img/artikel/'.$data->foto)}}" alt="">
                             <ul class="tags"><br>
-                                <h5>Tag</h5>
+                                <h5 style="color:yellow;">Tag </h5>
                                     @foreach($data->tag as $t)
-                                        <li><a href="/tag/{{$t->slug}}">{{ $t->nama_tag }}</a></li>
+                                        <li><a style="color:white; " href="/tag/{{$t->slug}}">{{ $t->nama_tag }}</a></li>
                                     @endforeach
                                 </ul>
 						</div>
 						<div class="blog_content">
 							<a class="title" href="{{ route('detail.blog', $data->slug) }}">
-                                    <h4>
+                                    <h4 style="color:yellow;">
                                         {{ $data->judul }}
                                     </h4>
                                 </a>
-							 <p><a href="{{ route('detail.blog', $data->slug) }}">{!! substr($data->konten, 0, 25).'. . . Lihat Selengkapnya' !!}</a></p><br>
+							 <p><a style="color:white;" href="{{ route('detail.blog', $data->slug) }}">{!! substr($data->konten, 0, 25).'. . . Lihat Selengkapnya' !!}</a></p><br>
 							<div class="date">
-								<a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>13th Dec </a>
-								<a href="#"><i class="fa fa-heart" aria-hidden="true"></i> 15</a>
-                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 05</a>
+								<a style="color:cyan;" href="#"><i class="fa fa-calendar" aria-hidden="true"></i>13th Dec </a>
+								<a style="color:cyan;" href="#"><i class="fa fa-heart" aria-hidden="true"></i> 15</a>
+                                <a style="color:cyan;" href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 05</a>
                                 @endforeach
 							</div>
 						</div>

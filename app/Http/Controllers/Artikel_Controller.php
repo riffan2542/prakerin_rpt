@@ -109,33 +109,38 @@ class Artikel_Controller extends Controller
     {
         $artikel = Artikel::findOrFail($id);
         $artikel->judul = $request->judul;
-        $artikel->slug = str_slug($request->judul);
+        $artikel->slug = str_slug($request->judul, '-');
         $artikel->konten = $request->konten;
         $artikel->user_id = Auth::user()->id;
         $artikel->kategori_id = $request->kategori_id;
 
-        if ($request->hasFile('foto')) {
+        if ($request->hasFile('foto')){
             $file = $request->file('foto');
-            $destinationPath = public_path() . '/assets/img/artikel/';
-            $filename = str_random(6) . '_' . '/assets/img/artikel/';
-            $upload = $file->move($destinationPath, $filename);
+            $path = public_path().
+                            '/assets/img/artikel/';
+            $filename = str_random(6).'_'
+                        .$file->getClientOriginalName();
+            $uploadSuccess = $file->move(
+                $path,
+                $filename
+            );
+            // hapus foto lama, jika ada
+            if ($artikel->foto){
+                $old_foto = $artikel->foto;
+                $filepath = public_path()
+                .'/assets/img/artikel'
+                .$artikel->foto;    
+                try {
+                    File::delete($filepath);
+                } catch (FileNotFoundException $e) {
+                    // File sudah dihapus/tidak ada
+                }
+            }
+            $artikel->foto = $filename;
         }
-
-        if ($artikel->foto) {
-            $old_foto = $artikel->foto;
-            $filepath = public_path() . '/assets/img/' . $artikel->foto;
-            try {
-                File::delete($filepath);
-            } catch (FileNotFoundException $e) { }
-
-            $artikel->save();
-            $artikel->tag()->sync($request->tag);
-            Session::flash("flash_notification", [
-                "level" => "primary",
-                "message" => "Berhasil mengubah data artikel berjudul <b>$artikel->judul</b>!"
-            ]);
-            return redirect()->route('artikel.index');
-        }
+        $artikel->save();
+        $artikel->tag()->sync($request->tag_id);
+        return redirect()->route('artikel.index');
     }
 
     /**
