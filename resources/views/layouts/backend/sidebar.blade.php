@@ -113,12 +113,12 @@
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link nav-pill user-avatar" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-								<img src="/backend/assets/img/avatars/fotopp.jpg" class="w-35 rounded-circle" alt="Reynaldi Reky">
+								<img src="/backend/assets/img/avatars/fotopp.jpg" class="w-35 rounded-circle">
 							</a>
 							<div class="dropdown-menu dropdown-menu-right dropdown-menu-accout">
 								<div class="dropdown-header pb-3">
 									<div class="media d-user">
-										<img class="align-self-center mr-3 w-40 rounded-circle" src="/backend/assets/img/avatars/rey.jpeg" alt="Reynaldi Reky">
+										<img class="align-self-center mr-3 w-40 rounded-circle" src="/backend/assets/img/avatars/fotopp.jpg">
 										<div class="media-body">
 											<h5 class="mt-0 mb-0">Riffan Pathin Tustiawan</h5>
 											<span>riffan2542@gmail.com</span>
