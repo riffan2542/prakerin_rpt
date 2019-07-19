@@ -39,24 +39,6 @@
                                 <li><a href="/admin/tag"><span>Tag Artikel</span></a></li>
 							</ul>
                         </li>
-                        <li class="nav-dropdown">
-							<a class="has-arrow" aria-expanded="false"><i class="icon dripicons-article"></i><span>Data Review</span></a>
-							<ul class="collapse nav-sub" aria-expanded="false">
-								<li><a href="/admin/review"><span>Review</span></a></li>
-								<li><a href="/admin/kategorirev"><span>Kategori Review</span></a></li>
-								<li><a href="/admin/tagrev"><span>Tag Review</span></a></li>
-							</ul>
-                        </li>
-                        <li><a href="apps.contacts.html"><i class="icon dripicons-archive"></i><span>Kontak</span></a></li>
-                        <li class="nav-dropdown">
-							<a class="has-arrow" aria-expanded="false"><i class="icon dripicons-view-thumb"></i><span>Tentang Kami</span></a>
-							<ul class="collapse nav-sub">
-								<li><a href="#"><span>Tentang MyVG</span></a></li>
-								<li><a href="#"><span>Tentang SMK Assalaam</span></a></li>
-								<li><a href="#"><span>Tentang Kami</span></a></li>
-							</ul>
-						</li>
-                        <li><a href="#"><i class="icon dripicons-jewel"></i><span>Tentang Admin</span></a></li>
 						</ul>
 					</nav>
 				</div>
