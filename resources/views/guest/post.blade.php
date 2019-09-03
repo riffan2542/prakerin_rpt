@@ -1,9 +1,25 @@
-@extends('layouts.guesttmp')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('title') All Blog @endsection
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-@section('content')
+    <!-- Title -->
+    <title>Egames - Gaming Magazine Template</title>
 
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('template/egames/img/core-img/favicon.ico') }}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ asset('template/egames/style.css') }}">
+
+</head>
+
+<body>
     <!-- Preloader -->
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="spinner">
@@ -22,7 +38,7 @@
                     <div class="col-12 d-flex align-items-center justify-content-between">
                         <!-- Logo Area -->
                         <div class="logo">
-                            <a href="index.html"><img src="/template/egames/img/core-img/logo.png" alt=""></a>
+                            <a href="index.html"><img src="{{ asset('template/egames/img/core-img/logo.png') }}" alt=""></a>
                         </div>
 
                         <!-- Search & Login Area -->
@@ -53,7 +69,7 @@
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"></span>
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
                         </div>
 
                         <!-- Menu -->
@@ -67,36 +83,29 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li><a href="/">Home</a></li>
+                                    <li><a href="index.html">Home</a></li>
                                     <li><a href="game-review.html">Games</a>
                                         <ul class="dropdown">
-                                            <li><a href="game-review.html">Game Review</a></li>
-                                            <li><a href="single-game-review.html">Single Game Review</a></li>
+                                            <li><a href="/gamereview">Game Review</a></li>
+                                            <li><a href="/singlegame">Single Game Review</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">Pages</a>
                                         <ul class="dropdown">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="post.html">Articles</a></li>
-                                            <li><a href="single-post.html">Single Articles</a></li>
-                                            <li><a href="game-review.html">Game Review</a></li>
-                                            <li><a href="single-game-review.html">Single Game Review</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="/">Home</a></li>
+                                            <li><a href="/post">Articles</a></li>
+                                            <li><a href="/gamereview">Game Review</a></li>
+                                            <li><a href="/singlegame">Single Game Review</a></li>
+                                            <li><a href="/contact">Contact</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="post.html">Articles</a>
+                                    <li><a href="/singlegame">Reviews</a>
                                         <ul class="dropdown">
-                                            <li><a href="/index">Articles</a></li>
-                                            <li><a href="single-post.html">Single Articles</a></li>
+                                            <li><a href="/gamereview">Game Review</a></li>
+                                            <li><a href="/singlegame">Single Game Review</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="single-game-review.html">Reviews</a>
-                                        <ul class="dropdown">
-                                            <li><a href="game-review.html">Game Review</a></li>
-                                            <li><a href="single-game-review.html">Single Game Review</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="/contact">Contact</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -119,13 +128,13 @@
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Breadcrumb Area Start ##### -->
-    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(/template/egames/img/bg-img/23.jpg);">
+    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(template/egames/img/bg-img/3.jpg);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <!-- Breadcrumb Text -->
                 <div class="col-12">
                     <div class="breadcrumb-text">
-                        <h2>Article</h2>
+                        <h2>Category</h2>
                     </div>
                 </div>
             </div>
@@ -133,173 +142,154 @@
     </section>
     <!-- ##### Breadcrumb Area End ##### -->
 
-    <!-- ##### Post Details Area Start ##### -->
-    <section class="post-news-area section-padding-0-100">
-        <div class="container"> 
+    <!-- ##### Articles Area Start ##### -->
+    <section class="articles-area section-padding-0-100">
+        <div class="container">
             <div class="row justify-content-center">
-                <!-- Post Details Content Area -->
+                <!-- Articles Post Area -->
                 <div class="col-12 col-lg-8">
                     <div class="mt-100">
-                        <div class="post-details-content mb-100">
 
-<!-- Start blog-posts Area -->
-			<section class="blog-posts-area section-gap">
-				<div class="container">
-                <h3>{{ $artikel->judul }}</h3>
-					<div class="row">
-						<div class="col-lg-8 post-list blog-post-list">
-                                <div class="single-post">
-                                        <img class="img-fluid" src="{{ asset('assets/img/artikel/'.$artikel->foto)}}" alt="" style="height: 500px; width:  600px;">
-                                        <ul class="tags">
-                                            @foreach($artikel->tag as $tag)
-                                                <li><a href="blog/tag/">{{ $tag->nama_tag }}</a></li>
-                                            @endforeach
-                                        </ul>
-                                        {{--  <a href="{{ route('detail.blog', $artikel->slug) }}">
-                                        </a><br>  --}}
-                                            <p>
-                                                {!! $artikel->konten !!}
-                                            </p>
-                                        <div class="bottom-meta">
-                                            <div class="user-details row align-items-center">
-                                            </div>
-                                        </div>
-
-                        </div>
-					</div>
-				</div>
-			</section>
-		<!-- End blog-posts Area -->
-
-                            {{--  <div class="blog-thumbnail mb-50">
-                                <img src="/template/egames/img/bg-img/24.jpg" alt="">
+                        <!-- *** Single Articles Area *** -->
+                        <div class="single-articles-area d-flex flex-wrap mb-30">
+                            <div class="article-thumbnail">
+                                <img src="{{ asset('template/egames/img/bg-img/6.jpg') }}" alt="">
                             </div>
-                            <div class="blog-content">
-                                <h4 class="post-title">Sony’s new releases for 2018</h4>
-                                <div class="post-meta mb-30">
+                            <div class="article-content">
+                                <a href="/singlepost" class="post-title">Sony’s new releases for 2018</a>
+                                <div class="post-meta">
                                     <a href="#" class="post-date">July 12, 2018</a>
-                                    <a href="#" class="post-author">By Admin</a>
                                     <a href="#" class="post-comments">2 Comments</a>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat volutpat. Sed efficitur diam.Aenean ut eros in ligula mollis lacinia eu in metus. In diam leo, convallis id nisi sed, mollis malesuada arcu. Aenean nisi tellus, posuere quis quam nec, mattis tempor dui. Suspendisse non ante mollis, fermentum erat non, fermentum neque. Phasellus vulputate, odio sit amet rhoncus interdum, est est condimentum velit, non condimentum lectus sapien id ante. Nullam sed quam hendrerit, cursus augue at, ultricies erat. Nulla sed pharetra ligula.</p>
-
-                                <p>n vitae nisi aliquam, scelerisque leo a, volutpat sem. Vivamus rutrum dui fermentum eros hendrerit, id lobortis leo volutpat. Maecenas sollicitudin est in libero pretium interdum. Nullam volutpat dui sem, ac congue purus luctus nec. Curabitur luctus luctus erat, sit amet facilisis quam congue quis. Quisque ornare luctus erat id dignissim. Nullam ac nunc quis ex porttitor luctus.</p>
-
-                                <p>Integer sed facilisis eros. In iaculis rhoncus velit in malesuada. In hac habitasse platea dictumst. Fusce erat ex, consectetur sit amet ornare suscipit, porta et erat. Donec nec nisi in nibh commodo laoreet. Mauris dapibus justo ut feugiat malesuada. Fusce ultricies ante tortor, non vestibulum est feugiat ut.</p>
-
-                                <div class="row mt-50">
-                                    <div class="col-6">
-                                        <img src="/template/egames/img/bg-img/25.jpg" alt="">
-                                    </div>
-                                    <div class="col-6">
-                                        <img src="/template/egames/img/bg-img/26.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>  --}}
-
-
-                        </div>
-
-                        <!-- Comment Area Start -->
-                        <div class="comment_area clearfix mb-70">
-                            <h4 class="mb-50">Comments</h4>
-
-                            <ol>
-                                <!-- Single Comment Area -->
-                                <li class="single_comment_area">
-                                    <!-- Comment Content -->
-                                    <div class="comment-content d-flex">
-                                        <!-- Comment Author -->
-                                        <div class="comment-author">
-                                            <img src="/template/egames/img/bg-img/32.jpg" alt="author">
-                                        </div>
-                                        <!-- Comment Meta -->
-                                        <div class="comment-meta">
-                                            <a href="#" class="post-author">William Smith</a>
-                                            <a href="#" class="post-date">July 12, 2018</a>
-                                            <p>Integer sed facilisis eros. In iaculis rhoncus velit in malesuada. In hac habitasse platea dictumst. Fusce erat ex, consectetur sit amet ornare suscipit, porta et erat. Donec nec nisi in nibh commodo laoreet.</p>
-                                            <a href="#reply" class="reply">Reply</a>
-                                        </div>
-                                    </div>
-
-                                    <ol class="children">
-                                        <li class="single_comment_area">
-                                            <!-- Comment Content -->
-                                            <div class="comment-content d-flex">
-                                                <!-- Comment Author -->
-                                                <div class="comment-author">
-                                                    <img src="/template/egames/img/bg-img/33.jpg" alt="author">
-                                                </div>
-                                                <!-- Comment Meta -->
-                                                <div class="comment-meta">
-                                                    <a href="#" class="post-author">Jaku Smith</a>
-                                                    <a href="#" class="post-date">July 12, 2018</a>
-                                                    <p>Facilisis eros. In iaculis rhoncus velit in malesuada. In hac habitasse platea dictumst. Fusce erat ex, consectetur sit amet ornare suscipit, porta et erat. Donec nec nisi in nibh commodo laoreet.</p>
-                                                    <a href="#reply" class="reply">Reply</a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ol>
-                                </li>
-
-                                <!-- Single Comment Area -->
-                                <li class="single_comment_area">
-                                    <!-- Comment Content -->
-                                    <div class="comment-content d-flex">
-                                        <!-- Comment Author -->
-                                        <div class="comment-author">
-                                            <img src="/template/egames/img/bg-img/32.jpg" alt="author">
-                                        </div>
-                                        <!-- Comment Meta -->
-                                        <div class="comment-meta">
-                                            <a href="#" class="post-author">James Carter</a>
-                                            <a href="#" class="post-date">July 12, 2018</a>
-                                            <p>Integer sed facilisis eros. In iaculis rhoncus velit in malesuada. In hac habitasse platea dictumst. Fusce erat ex, consectetur sit amet ornare suscipit, porta et erat. Donec nec nisi in nibh commodo laoreet.</p>
-                                            <a href="#reply" class="reply">Reply</a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div class="post-a-comment-area mb-30 clearfix" id="reply">
-                            <h4 class="mb-50">Leave a reply</h4>
-
-                            <!-- Reply Form -->
-                            <div class="contact-form-area">
-                                <form action="#" method="post">
-                                    <div class="row">
-                                        <div class="col-12 col-lg-6">
-                                            <input type="text" class="form-control" id="name" placeholder="Name*">
-                                        </div>
-                                        <div class="col-12 col-lg-6">
-                                            <input type="email" class="form-control" id="email" placeholder="Email*">
-                                        </div>
-                                        <div class="col-12">
-                                            <input type="text" class="form-control" id="subject" placeholder="Website">
-                                        </div>
-                                        <div class="col-12">
-                                            <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                                        </div>
-                                        <div class="col-12">
-                                            <button class="btn egames-btn w-100" type="submit">Submit Comment</button>
-                                        </div>
-                                    </div>
-                                </form>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat volutpat. Sed efficitur diam.</p>
                             </div>
                         </div>
+
+                        <!-- *** Single Articles Area *** -->
+                        <div class="single-articles-area d-flex flex-wrap mb-30">
+                            <div class="article-thumbnail">
+                                <img src="{{ asset('template/egames/img/bg-img/7.jpg') }}" alt="">
+                            </div>
+                            <div class="article-content">
+                                <a href="/singlepost" class="post-title">10 Tips to be a better gamer</a>
+                                <div class="post-meta">
+                                    <a href="#" class="post-date">July 12, 2018</a>
+                                    <a href="#" class="post-comments">2 Comments</a>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat volutpat. Sed efficitur diam.</p>
+                            </div>
+                        </div>
+
+                        <!-- *** Single Articles Area *** -->
+                        <div class="single-articles-area d-flex flex-wrap mb-30">
+                            <div class="article-thumbnail">
+                                <img src="{{ asset('template/egames/img/bg-img/8.jpg') }}" alt="">
+                            </div>
+                            <div class="article-content">
+                                <a href="/singlpost" class="post-title">Microsoft has some new tips</a>
+                                <div class="post-meta">
+                                    <a href="#" class="post-date">July 12, 2018</a>
+                                    <a href="#" class="post-comments">2 Comments</a>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat volutpat. Sed efficitur diam.</p>
+                            </div>
+                        </div>
+
+                        <!-- *** Single Articles Area *** -->
+                        <div class="single-articles-area d-flex flex-wrap mb-30">
+                            <div class="article-thumbnail">
+                                <img src="{{ asset('template/egames/img/bg-img/9.jpg') }}" alt="">
+                            </div>
+                            <div class="article-content">
+                                <a href="/singlepost" class="post-title">Sony’s new releases for 2018</a>
+                                <div class="post-meta">
+                                    <a href="#" class="post-date">July 12, 2018</a>
+                                    <a href="#" class="post-comments">2 Comments</a>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat volutpat. Sed efficitur diam.</p>
+                            </div>
+                        </div>
+
+                        <!-- *** Single Articles Area *** -->
+                        <div class="single-articles-area d-flex flex-wrap mb-30">
+                            <div class="article-thumbnail">
+                                <img src="{{ asset('template/egames/img/bg-img/10.jpg') }}" alt="">
+                            </div>
+                            <div class="article-content">
+                                <a href="/singlepost" class="post-title">10 Tips to be a better gamer</a>
+                                <div class="post-meta">
+                                    <a href="#" class="post-date">July 12, 2018</a>
+                                    <a href="#" class="post-comments">2 Comments</a>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat volutpat. Sed efficitur diam.</p>
+                            </div>
+                        </div>
+
+                        <!-- *** Single Articles Area *** -->
+                        <div class="single-articles-area d-flex flex-wrap mb-30">
+                            <div class="article-thumbnail">
+                                <img src="{{ asset('template/egames/img/bg-img/11.jpg') }}" alt="">
+                            </div>
+                            <div class="article-content">
+                                <a href="/singlepost" class="post-title">Microsoft has some new tips</a>
+                                <div class="post-meta">
+                                    <a href="#" class="post-date">July 12, 2018</a>
+                                    <a href="#" class="post-comments">2 Comments</a>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat volutpat. Sed efficitur diam.</p>
+                            </div>
+                        </div>
+
+                        <!-- *** Single Articles Area *** -->
+                        <div class="single-articles-area d-flex flex-wrap mb-30">
+                            <div class="article-thumbnail">
+                                <img src="{{ asset('template/egames/img/bg-img/12.jpg') }}" alt="">
+                            </div>
+                            <div class="article-content">
+                                <a href="/singlepost" class="post-title">Sony’s new releases for 2018</a>
+                                <div class="post-meta">
+                                    <a href="#" class="post-date">July 12, 2018</a>
+                                    <a href="#" class="post-comments">2 Comments</a>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat volutpat. Sed efficitur diam.</p>
+                            </div>
+                        </div>
+
+                        <!-- *** Single Articles Area *** -->
+                        <div class="single-articles-area d-flex flex-wrap mb-30">
+                            <div class="article-thumbnail">
+                                <img src="{{ asset('template/egames/img/bg-img/13.jpg') }}" alt="">
+                            </div>
+                            <div class="article-content">
+                                <a href="/singlepost" class="post-title">10 Tips to be a better gamer</a>
+                                <div class="post-meta">
+                                    <a href="#" class="post-date">July 12, 2018</a>
+                                    <a href="#" class="post-comments">2 Comments</a>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat volutpat. Sed efficitur diam.</p>
+                            </div>
+                        </div>
+
+                        <!-- ### Pagination Area ### -->
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination mt-100">
+                                <li class="page-item active"><a class="page-link" href="#">01</a></li>
+                                <li class="page-item"><a class="page-link" href="#">02</a></li>
+                                <li class="page-item"><a class="page-link" href="#">03</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
 
-                <!-- Sidebar Widget -->
+                <!-- Sidebar Area -->
                 <div class="col-12 col-sm-9 col-md-6 col-lg-4">
                     <div class="sidebar-area mt-100">
 
                         <!-- Single Widget Area -->
                         <div class="single-widget-area add-widget">
-                            <a href="#"><img src="/template/egames/img/bg-img/add.png" alt=""></a>
+                            <a href="#"><img src="{{ asset('template/egames/img/bg-img/add.png') }}" alt=""></a>
                             <!-- Side Img -->
-                            <img src="/template/egames/img/bg-img/side-img.png" class="side-img" alt="">
+                            <img src="{{ asset('template/egames/img/bg-img/side-img.png') }}" class="side-img" alt="">
                         </div>
 
                         <!-- Single Widget Area -->
@@ -307,7 +297,7 @@
                             <!-- Single Video Widget -->
                             <div class="single-video-widget d-flex">
                                 <div class="video-thumbnail">
-                                    <img src="/template/egames/img/bg-img/14.jpg" alt="">
+                                    <img src="{{ asset('template/egames/img/bg-img/14.jpg') }}" alt="">
                                 </div>
                                 <div class="video-text">
                                     <a href="#" class="video-title">Assemble Your Squad and Join the Battle</a>
@@ -319,7 +309,7 @@
                             <!-- Single Video Widget -->
                             <div class="single-video-widget d-flex">
                                 <div class="video-thumbnail">
-                                    <img src="/template/egames/img/bg-img/15.jpg" alt="">
+                                    <img src="{{ asset('template/egames/img/bg-img/15.jpg') }}" alt="">
                                 </div>
                                 <div class="video-text">
                                     <a href="#" class="video-title">Tips to improve your game</a>
@@ -331,7 +321,7 @@
                             <!-- Single Video Widget -->
                             <div class="single-video-widget d-flex">
                                 <div class="video-thumbnail">
-                                    <img src="/template/egames/img/bg-img/16.jpg" alt="">
+                                    <img src="{{ asset('template/egames/img/bg-img/16.jpg') }}" alt="">
                                 </div>
                                 <div class="video-text">
                                     <a href="#" class="video-title">Game reviews: the best of 2018</a>
@@ -343,7 +333,7 @@
                             <!-- Single Video Widget -->
                             <div class="single-video-widget d-flex">
                                 <div class="video-thumbnail">
-                                    <img src="/template/egames/img/bg-img/17.jpg" alt="">
+                                    <img src="{{ asset('template/egames/img/bg-img/17.jpg') }}" alt="">
                                 </div>
                                 <div class="video-text">
                                     <a href="#" class="video-title">Assemble Your Squad and Join the Battle</a>
@@ -355,7 +345,7 @@
                             <!-- Single Video Widget -->
                             <div class="single-video-widget d-flex">
                                 <div class="video-thumbnail">
-                                    <img src="/template/egames/img/bg-img/18.jpg" alt="">
+                                    <img src="{{ asset('template/egames/img/bg-img/18.jpg') }}" alt="">
                                 </div>
                                 <div class="video-text">
                                     <a href="#" class="video-title">New to gaming? Here are some tips</a>
@@ -371,7 +361,7 @@
                             <!-- Single Post Widget -->
                             <div class="single-post-area d-flex">
                                 <div class="blog-thumbnail">
-                                    <img src="/template/egames/img/bg-img/19.jpg" alt="">
+                                    <img src="{{ asset('template/egames/img/bg-img/19.jpg') }}" alt="">
                                 </div>
                                 <div class="blog-content">
                                     <a href="#" class="post-title">New to gaming? Here are some tips</a>
@@ -382,7 +372,7 @@
                             <!-- Single Post Widget -->
                             <div class="single-post-area d-flex">
                                 <div class="blog-thumbnail">
-                                    <img src="/template/egames/img/bg-img/20.jpg" alt="">
+                                    <img src="{{ asset('template/egames/img/bg-img/20.jpg') }}" alt="">
                                 </div>
                                 <div class="blog-content">
                                     <a href="#" class="post-title">Gaming at a new lever: 2018 new release</a>
@@ -393,7 +383,7 @@
                             <!-- Single Post Widget -->
                             <div class="single-post-area d-flex">
                                 <div class="blog-thumbnail">
-                                    <img src="/template/egames/img/bg-img/21.jpg" alt="">
+                                    <img src="{{ asset('template/egames/img/bg-img/21.jpg') }}" alt="">
                                 </div>
                                 <div class="blog-content">
                                     <a href="#" class="post-title">2018 Comicon: See the lastest news</a>
@@ -404,7 +394,7 @@
                             <!-- Single Post Widget -->
                             <div class="single-post-area d-flex">
                                 <div class="blog-thumbnail">
-                                    <img src="/template/egames/img/bg-img/22.jpg" alt="">
+                                    <img src="{{ asset('template/egames/img/bg-img/22.jpg') }}" alt="">
                                 </div>
                                 <div class="blog-content">
                                     <a href="#" class="post-title">New to gaming? Here are some tips</a>
@@ -418,7 +408,34 @@
             </div>
         </div>
     </section>
-    <!-- ##### Post Details Area End ##### -->
+    <!-- ##### Articles Area End ##### -->
+
+    <!-- ##### Featured Articles Area Start ##### -->
+    <section class="featured-articles-area section-padding-100-0 bg-img bg-pattern bg-fixed" style="background-image: url(template/egames/img/bg-img/5.jpg);">
+        <div class="container">
+            <div class="row">
+                <!-- Article Thumbnail -->
+                <div class="col-12 col-lg-6">
+                    <div class="article-thumbnail mb-100">
+                        <img src="{{ asset('template/egames/img/bg-img/4.jpg') }}" alt="">
+                    </div>
+                </div>
+                <!-- Article Content -->
+                <div class="col-12 col-lg-6">
+                    <div class="article-content mb-100">
+                        <a href="single-post.html" class="post-title">Sony’s new releases for 2018</a>
+                        <div class="post-meta">
+                            <a href="#" class="post-date">July 12, 2018</a>
+                            <a href="#" class="post-comments">2 Comments</a>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat volutpat. Sed efficitur diam. Eenean ut eros in ligula mollis lacinia eu in metus. In diam leo, convallis id nisi sed, mollis malesuada arcu. Aenean nisi tellus, posuere quis quam nec, mattis tempor dui. Suspendisse non ante mollis, fermentum erat non, fermentum neque. Phasellus vulputate, odio sit amet rhoncus interdum, est est condimentum velit, non condimentum lectus sapien id ante. Nullam sed quam hendrerit, cursus augue at, ultricies erat. Nulla sed pharetra ligula.</p>
+                        <a href="#" class="btn egames-btn mt-50">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Featured Articles Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area">
@@ -430,7 +447,7 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget mb-70">
                             <div class="widget-title">
-                                <a href="index.html"><img src="/template/egames/img/core-img/logo2.png" alt=""></a>
+                                <a href="index.html"><img src="{{ asset('template/egames/img/core-img/logo2.png') }}" alt=""></a>
                             </div>
                             <div class="widget-content">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat volutpat. Sed efficitur diam ut interdum ultricies.</p>
@@ -519,8 +536,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="game-review.html">Games</a></li>
                                 <li><a href="post.html">Articles</a></li>
-                                <li><a hre
-                                    f="single-game-review.html">Reviews</a></li>
+                                <li><a href="single-game-review.html">Reviews</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
@@ -530,8 +546,18 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div>
     </footer>
     <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{{ asset('template/egames/js/jquery/jquery-2.2.4.min.js') }}"></script>
+    <!-- Popper js -->
+    <script src="{{ asset('template/egames/js/bootstrap/popper.min.js') }}"></script>
+    <!-- Bootstrap js -->
+    <script src="{{ asset('template/egames/js/bootstrap/bootstrap.min.js') }}"></script>
+    <!-- All Plugins js -->
+    <script src="{{ asset('template/egames/js/plugins/plugins.js') }}"></script>
+    <!-- Active js -->
+    <script src="{{ asset('template/egames/js/active.js') }}"></script>
 </body>
 
 </html>
-
-@endsection

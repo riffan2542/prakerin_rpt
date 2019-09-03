@@ -34,7 +34,7 @@ Route::group(
         Route::resource('kategori', 'Kategori_Controller');
         Route::resource('tag', 'Tag_Controller');
         Route::resource('artikel', 'Artikel_Controller');
-
+        Route::resource('genre', 'GenreController');
         Route::resource('kategorirev', 'Kategorirev_Controller');
         Route::resource('tagrev', 'Tagrev_Controller');
         Route::resource('review', 'Review_Controller');
@@ -48,13 +48,23 @@ Route::group(['prefix' => '/'], function () {
         return view('frontend.profil');
     });
 
-    Route::get('/kontak', function () {
-        return view('frontend.kontak');
+    Route::get('/contact', function () {
+        return view('guest/contact');
+    });
+    Route::get('/gamereview', function () {
+        return view('guest/gamereview');
+    }); 
+    Route::get('/singlegame', function () {
+        return view('singlegame');
+    });
+    Route::get('/post', function () {
+        return view('guest/post');
     });
     Route::get('/index', 'Frontend_Controller@allblog')->name('all.blog');
     Route::get('/index/{artikel}', 'Frontend_Controller@detailblog')->name('detail.blog');
     Route::get('/index/kategori/{cat}', 'Frontend_Controller@blogcat')->name('cat.blog');
     Route::get('/index/tag/{tag}', 'Frontend_Controller@blogtag')->name('tag.blog');
+    Route::resource('genre', 'GenreController');
 });
 
 Auth::routes();

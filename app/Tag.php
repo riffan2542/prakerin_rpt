@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Session;
 
 class Tag extends Model
 {
@@ -11,7 +12,7 @@ class Tag extends Model
 
     public function artikel()
     {
-        return $this->hasMany('App\Artikel', 'tag_id');
+        return $this->belongsToMany('App\Artikel', 'artikel_tag', 'tag_id', 'artikel_id');
     }
 
     public function getRouteKeyName()
@@ -19,26 +20,4 @@ class Tag extends Model
         return 'slug';
     }
 
-    public static function boot()
-    {
-        parent::boot();
-        self::deleting(function ($tag) {
-            // mengecek apakah artikel tercantum dengan tag tersebut
-            if ($tag->artikel->count() > 0) {
-                // menyiapkan pesan error
-                $html = 'tag tidak bisa dihapus karena masih memiliki artikel ';
-                $html .= '<ul>';
-                foreach ($tag->artikel as $data) {
-                    $html .= "$data->judul";
-                }
-                $html .= '</ul>';
-                Session::flash("flash_notification", [
-                    "level" => "danger",
-                    "message" => $html
-                ]);
-                // membatalkan proses penghapusan
-                return false;
-            }
-        });
-    }
 }

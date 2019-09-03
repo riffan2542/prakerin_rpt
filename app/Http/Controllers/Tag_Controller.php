@@ -105,8 +105,21 @@ class Tag_Controller extends Controller
      */
     public function destroy($id)
     {
-        $tag = Tag::findOrFail($id);
+        $tag = Tag::with('artikel')->findOrFail($id);
+        if($tag->artikel->count() > 0){
+            $response = [
+                'success'   => true,
+                'data'      => $tag,
+                'message'   => 'Gagal dihapus! Karena Tag Masih Dipakai oleh beberapa postingan'
+            ];
+            return response()->json($response, 200);
+        }
         $tag->delete();
-        return redirect()->route('tag.index');
+        $response = [
+            'success'   => true,
+            'data'      => $tag,
+            'message'   => 'Berhasil dihapus!'
+        ];
+        return response()->json($response, 200);
     }
 }

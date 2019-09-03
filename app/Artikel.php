@@ -14,6 +14,11 @@ class Artikel extends Model
         return $this->belongsTo('App\Kategori', 'kategori_id');
     }
 
+    public function genre()
+    {
+        return $this->belongsTo('App\Genre', 'genre_id');
+    }
+
     public function user()
     {
         return $this->belongsTo('App\User', 'user_id');

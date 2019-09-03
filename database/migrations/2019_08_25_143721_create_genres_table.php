@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArtikelsTable extends Migration
+class CreateGenresTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,12 @@ class CreateArtikelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('artikels', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('judul');
+        Schema::create('genres', function (Blueprint $table) {
+            $table->Increments('id');
+            $table->string('nama');
             $table->string('slug');
-            $table->text('konten');
-            $table->string('foto');
-            $table->unsignedBigInteger('kategori_id');
-            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
-
     }
 
     /**
@@ -33,6 +28,6 @@ class CreateArtikelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artikels');
+        Schema::dropIfExists('genres');
     }
 }

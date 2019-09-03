@@ -68,35 +68,28 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="/">Home</a></li>
-                                    <li><a href="game-review.html">Games</a>
+                                    <li><a href="game review.html">Games</a>
                                         <ul class="dropdown">
-                                            <li><a href="game-review.html">Game Review</a></li>
-                                            <li><a href="single-game-review.html">Single Game Review</a></li>
+                                        <li><a href="/gamereview">Game Review</a></li>
+                                            <li><a href="/singlegame">Single Game Review</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">Pages</a>
                                         <ul class="dropdown">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="post.html">Articles</a></li>
-                                            <li><a href="single-post.html">Single Articles</a></li>
-                                            <li><a href="game-review.html">Game Review</a></li>
-                                            <li><a href="single-game-review.html">Single Game Review</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="/">Home</a></li>
+                                            <li><a href="/post">Articles</a></li>
+                                            <li><a href="/gamereview">Game Review</a></li>
+                                            <li><a href="/singlegame">Single Game Review</a></li>
+                                            <li><a href="/contact">Contact</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="post.html">Articles</a>
+                                    <li><a href="/singlegame">Reviews</a>
                                         <ul class="dropdown">
-                                            <li><a href="/index">Articles</a></li>
-                                            <li><a href="single-post.html">Single Articles</a></li>
+                                            <li><a href="/gamereview">Game Review</a></li>
+                                            <li><a href="/singlegame">Single Game Review</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="single-game-review.html">Reviews</a>
-                                        <ul class="dropdown">
-                                            <li><a href="game-review.html">Game Review</a></li>
-                                            <li><a href="single-game-review.html">Single Game Review</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="/contact">Contact</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -213,12 +206,6 @@
                         <li class="nav-item">
                             <a class="nav-link active" id="popular-tab" data-toggle="tab" href="#popular" role="tab" aria-controls="popular" aria-selected="true">Popular</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="latest-tab" data-toggle="tab" href="#latest" role="tab" aria-controls="latest" aria-selected="false">Latest</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="editor-tab" data-toggle="tab" href="#editor" role="tab" aria-controls="editor" aria-selected="false">Editor’s Pick</a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -243,12 +230,12 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/51.jpg" alt="">
+                        <img src="/template/egames/img/bg-img/mobile.jpg" alt="">
                         <div class="slide-text">
-                            <a href="#" class="game-title">Doom</a>
+                            <a href="#" class="game-title">Mobile Legend</a>
                             <div class="meta-data">
                                 <a href="#">User: 9.1/10</a>
-                                <a href="#">Adventure</a>
+                                <a href="#">Moba</a>
                             </div>
                         </div>
                     </div>
@@ -279,256 +266,51 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/54.jpg" alt="">
+                        <img src="/template/egames/img/bg-img/pubg.jpg" alt="">
                         <div class="slide-text">
-                            <a href="#" class="game-title">Persona 5</a>
+                            <a href="#" class="game-title">Pubg</a>
                             <div class="meta-data">
                                 <a href="#">User: 9.1/10</a>
-                                <a href="#">Action</a>
+                                <a href="#">Mobile</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/52.jpg" alt="">
+                        <img src="/template/egames/img/bg-img/clashroyale.png" alt="">
                         <div class="slide-text">
-                            <a href="#" class="game-title">God of War</a>
+                            <a href="#" class="game-title">Clash Royale</a>
                             <div class="meta-data">
                                 <a href="#">User: 9.1/10</a>
-                                <a href="#">Action</a>
+                                <a href="#">Strategi</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/53.jpg" alt="">
+                        <img src="/template/egames/img/bg-img/finalfantasy.jpg" alt="">
                         <div class="slide-text">
-                            <a href="#" class="game-title">Bloodborne</a>
+                            <a href="#" class="game-title">Final Fantasy</a>
                             <div class="meta-data">
                                 <a href="#">User: 9.1/10</a>
-                                <a href="#">Adventure</a>
+                                <a href="#">Rpg</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/54.jpg" alt="">
+                        <img src="/template/egames/img/bg-img/evil.jpg" alt="">
                         <div class="slide-text">
-                            <a href="#" class="game-title">Persona 5</a>
+                            <a href="#" class="game-title">Resident Evil 2</a>
                             <div class="meta-data">
                                 <a href="#">User: 9.1/10</a>
-                                <a href="#">Action</a>
+                                <a href="#">Horor</a>
                             </div>
                         </div>
                     </div>
-
-                </div>
-            </div>
-            <div class="tab-pane fade" id="latest" role="tabpanel" aria-labelledby="latest-tab">
-                <!-- Latest Games Slideshow -->
-                <div class="latest-games-slideshow owl-carousel">
-
-                    <!-- Single Games -->
-                    <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/50.jpg" alt="">
-                        <div class="slide-text">
-                            <a href="#" class="game-title">Grand Theft Auto V</a>
-                            <div class="meta-data">
-                                <a href="#">User: 9.1/10</a>
-                                <a href="#">Action</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Games -->
-                    <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/51.jpg" alt="">
-                        <div class="slide-text">
-                            <a href="#" class="game-title">Doom</a>
-                            <div class="meta-data">
-                                <a href="#">User: 9.1/10</a>
-                                <a href="#">Adventure</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Games -->
-                    <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/52.jpg" alt="">
-                        <div class="slide-text">
-                            <a href="#" class="game-title">God of War</a>
-                            <div class="meta-data">
-                                <a href="#">User: 9.1/10</a>
-                                <a href="#">Action</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Games -->
-                    <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/53.jpg" alt="">
-                        <div class="slide-text">
-                            <a href="#" class="game-title">Bloodborne</a>
-                            <div class="meta-data">
-                                <a href="#">User: 9.1/10</a>
-                                <a href="#">Adventure</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Games -->
-                    <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/54.jpg" alt="">
-                        <div class="slide-text">
-                            <a href="#" class="game-title">Persona 5</a>
-                            <div class="meta-data">
-                                <a href="#">User: 9.1/10</a>
-                                <a href="#">Action</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Games -->
-                    <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/52.jpg" alt="">
-                        <div class="slide-text">
-                            <a href="#" class="game-title">God of War</a>
-                            <div class="meta-data">
-                                <a href="#">User: 9.1/10</a>
-                                <a href="#">Action</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Games -->
-                    <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/53.jpg" alt="">
-                        <div class="slide-text">
-                            <a href="#" class="game-title">Bloodborne</a>
-                            <div class="meta-data">
-                                <a href="#">User: 9.1/10</a>
-                                <a href="#">Adventure</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Games -->
-                    <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/54.jpg" alt="">
-                        <div class="slide-text">
-                            <a href="#" class="game-title">Persona 5</a>
-                            <div class="meta-data">
-                                <a href="#">User: 9.1/10</a>
-                                <a href="#">Action</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="tab-pane fade" id="editor" role="tabpanel" aria-labelledby="editor-tab">
-                <!-- Editor Games Slideshow -->
-                <div class="editor-games-slideshow owl-carousel">
-
-                    <!-- Single Games -->
-                    <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/50.jpg" alt="">
-                        <div class="slide-text">
-                            <a href="#" class="game-title">Grand Theft Auto V</a>
-                            <div class="meta-data">
-                                <a href="#">User: 9.1/10</a>
-                                <a href="#">Action</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Games -->
-                    <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/51.jpg" alt="">
-                        <div class="slide-text">
-                            <a href="#" class="game-title">Doom</a>
-                            <div class="meta-data">
-                                <a href="#">User: 9.1/10</a>
-                                <a href="#">Adventure</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Games -->
-                    <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/52.jpg" alt="">
-                        <div class="slide-text">
-                            <a href="#" class="game-title">God of War</a>
-                            <div class="meta-data">
-                                <a href="#">User: 9.1/10</a>
-                                <a href="#">Action</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Games -->
-                    <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/53.jpg" alt="">
-                        <div class="slide-text">
-                            <a href="#" class="game-title">Bloodborne</a>
-                            <div class="meta-data">
-                                <a href="#">User: 9.1/10</a>
-                                <a href="#">Adventure</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Games -->
-                    <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/54.jpg" alt="">
-                        <div class="slide-text">
-                            <a href="#" class="game-title">Persona 5</a>
-                            <div class="meta-data">
-                                <a href="#">User: 9.1/10</a>
-                                <a href="#">Action</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Games -->
-                    <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/52.jpg" alt="">
-                        <div class="slide-text">
-                            <a href="#" class="game-title">God of War</a>
-                            <div class="meta-data">
-                                <a href="#">User: 9.1/10</a>
-                                <a href="#">Action</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Games -->
-                    <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/53.jpg" alt="">
-                        <div class="slide-text">
-                            <a href="#" class="game-title">Bloodborne</a>
-                            <div class="meta-data">
-                                <a href="#">User: 9.1/10</a>
-                                <a href="#">Adventure</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Games -->
-                    <div class="single-games-slide">
-                        <img src="/template/egames/img/bg-img/54.jpg" alt="">
-                        <div class="slide-text">
-                            <a href="#" class="game-title">Persona 5</a>
-                            <div class="meta-data">
-                                <a href="#">User: 9.1/10</a>
-                                <a href="#">Action</a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -731,7 +513,7 @@
     <!-- ##### Video Area End ##### -->
 
     <!-- ##### Articles Area Start ##### -->
-    <section class="latest-articles-area section-padding-100-0 bg-img bg-pattern bg-fixed" style="background-image: url(/template/egames/img/bg-img/5.jpg);">
+    <section class="latest-articles-area section-padding-100-0 bg-img bg-pattern bg-fixed" style="background-image: url(template/egames/img/bg-img/5.jpg);">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8">
@@ -739,109 +521,33 @@
                         <!-- Title -->
                         <h2 class="section-title mb-70 wow fadeInUp" data-wow-delay="100ms">Latest Articles</h2>
 
+                        <div id="isinya">
+    
+                        </div>
                         <!-- *** Single Articles Area *** -->
-<!--================ Start Blog Area ================-->
-	<section class="blog_area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="main_title">
-                        <center><h1 style="color:yellow;">Artikel</h1></center>
-                        <br>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4 col-md-6">
-                    @foreach($artikel as $data)
-					<div class="blog_items">
-						<div class="blog_img_box">
-                            <img class="img-fluid" src="{{ asset('assets/img/artikel/'.$data->foto)}}" alt="">
-                            <ul class="tags"><br>
-                                <h5 style="color:yellow;">Tag </h5>
-                                    @foreach($data->tag as $t)
-                                        <li><a style="color:white; " href="/tag/{{$t->slug}}">{{ $t->nama_tag }}</a></li>
-                                    @endforeach
-                                </ul>
-						</div>
-						<div class="blog_content">
-							<a class="title" href="{{ route('detail.blog', $data->slug) }}">
-                                    <h4 style="color:yellow;">
-                                        {{ $data->judul }}
-                                    </h4>
-                                </a>
-							 <p><a style="color:white;" href="{{ route('detail.blog', $data->slug) }}">{!! substr($data->konten, 0, 25).'. . . Lihat Selengkapnya' !!}</a></p><br>
-							<div class="date">
-								<a style="color:cyan;" href="#"><i class="fa fa-calendar" aria-hidden="true"></i>13th Dec </a>
-								<a style="color:cyan;" href="#"><i class="fa fa-heart" aria-hidden="true"></i> 15</a>
-                                <a style="color:cyan;" href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 05</a>
-                                @endforeach
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section><br>
-	<!--================ End Blog Area ================-->
-
-                        {{--  <div class="single-articles-area style-2 d-flex flex-wrap mb-30 wow fadeInUp" data-wow-delay="300ms ">  --}}
-                            {{--  <div class="article-thumbnail">
-                                <img src="/template/egames/img/bg-img/6.jpg" alt="">
-                            </div>
-                            <div class="article-content">
-                                <a href="single-post.html" class="post-title">Sony’s new releases for 2018</a>
-                                <div class="post-meta">
-                                    <a href="#" class="post-date">July 12, 2018</a>
-                                    <a href="#" class="post-comments">2 Comments</a>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat volutpat. Sed efficitur diam.</p>
-                            </div>  --}}
-                        {{--  </div>  --}}
-
-                        <!-- *** Single Articles Area *** -->
-                        {{--  <div class="single-articles-area style-2 d-flex flex-wrap mb-30 wow fadeInUp" data-wow-delay="500ms">
+                        @foreach ($artikel as $data)
+                        
+                        <div class="single-articles-area style-2 d-flex flex-wrap mb-30 wow fadeInUp" data-wow-delay="300ms">
                             <div class="article-thumbnail">
-                                <img src="/template/egames/img/bg-img/7.jpg" alt="">
+                            
+                                <img style="width:200px; height:300px" src="{{ asset('assets/img/artikel/'. 
+                                $data->foto.'') }}" alt="">
                             </div>
                             <div class="article-content">
-                                <a href="single-post.html" class="post-title">10 Tips to be a better gamer</a>
+                                <a href="/singlepost" class="post-title">{{ $data->judul }}</a>
                                 <div class="post-meta">
                                     <a href="#" class="post-date">July 12, 2018</a>
                                     <a href="#" class="post-comments">2 Comments</a>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat volutpat. Sed efficitur diam.</p>
-                            </div>
-                        </div>  --}}
-
-                        <!-- *** Single Articles Area *** -->
-                        {{--  <div class="single-articles-area style-2 d-flex flex-wrap mb-30 wow fadeInUp" data-wow-delay="700ms">
-                            <div class="article-thumbnail">
-                                <img src="/template/egames/img/bg-img/8.jpg" alt="">
-                            </div>
-                            <div class="article-content">
-                                <a href="single-post.html" class="post-title">Microsoft has some new tips</a>
-                                <div class="post-meta">
-                                    <a href="#" class="post-date">July 12, 2018</a>
-                                    <a href="#" class="post-comments">2 Comments</a>
+                                <div class="card__description">
+									<p> {!! substr($data->konten, 0, 100) .' . . .  ' !!} </p>
+									<a href="index/{{$data->slug}}" style="color:aqua;">Read more</a>
+									</div>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat volutpat. Sed efficitur diam.</p>
                             </div>
-                        </div>  --}}
-                    </div>
-                </div>
+                           
+                        @endforeach
 
-                <div class="col-12 col-md-6 col-lg-4">
-                    <!-- Title -->
-                    <h2 class="section-title mb-70 wow fadeInUp" data-wow-delay="100ms">This week’s deal</h2>
-
-                    <!-- Single Widget Area -->
-                    <div class="single-widget-area add-widget wow fadeInUp" data-wow-delay="300ms">
-                        <a href="#"><img src="/template/egames/img/bg-img/add.png" alt=""></a>
-                        <!-- Side Img -->
-                        <img src="/template/egames/img/bg-img/side-img.png" class="side-img" alt="">
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -857,7 +563,7 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget mb-70 wow fadeInUp" data-wow-delay="100ms">
                             <div class="widget-title">
-                                <a href="index.html"><img src="/template/egames/img/core-img/logo2.png" alt=""></a>
+                                <a href="index.html"><img src="{{ asset('template/egames/img/core-img/logo2.png') }}" alt=""></a>
                             </div>
                             <div class="widget-content">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat volutpat. Sed efficitur diam ut interdum ultricies.</p>
@@ -874,11 +580,11 @@
                             <div class="widget-content">
                                 <nav>
                                     <ul>
-                                        <li><a href="#">Doom</a></li>
+                                        <li><a href="#">Pubg</a></li>
                                         <li><a href="#">Grand Theft Auto</a></li>
                                         <li><a href="#">Bloodborne</a></li>
                                         <li><a href="#">God of war</a></li>
-                                        <li><a href="#">Persona 5</a></li>
+                                        <li><a href="#">Mobile Legend</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -914,11 +620,11 @@
                             <div class="widget-content">
                                 <nav>
                                     <ul>
-                                        <li><a href="#">Doom</a></li>
+                                        <li><a href="#">Residen Evil 2</a></li>
                                         <li><a href="#">Grand Theft Auto</a></li>
                                         <li><a href="#">Bloodborne</a></li>
                                         <li><a href="#">God of war</a></li>
-                                        <li><a href="#">Persona 5</a></li>
+                                        <li><a href="#">Clash Royale</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -935,7 +641,10 @@
                     <div class="col-12 col-sm-5">
                         <!-- Copywrite Text -->
                         <p class="copywrite-text"><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());
+</script> All rights reserved | This template is made with 
+<i class="fa fa-heart-o" aria-hidden="true"></i> by 
+<a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </p>
                     </div>
